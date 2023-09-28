@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head><title>Table fetch</title><h1>Table fetch</h1></head><body>
+<table border="1" width="100%">
+<tr >
+<th>name</th>
+<th>email</th>
+<th>mob</th>
+<th>action</th>
+</tr>
+<%if(table.length > 0 ){%>
+<%for(var i=0 ;i<table.length ; i++){ %>
+
+<tr>
+
+<td><%-table[i].name%></td>
+<td><%-table[i].email%></td>
+<td><%-table[i].mob%></td>
+<td><a href="/delete-student?mob=<%- table[i].mob %>">Delete</a></td>
+<%}%>
+<%}else{%>
+<h2>Data not found</h2>
+<%}%>
+</tr>
+</table>
+
+
+</body>
+</html>
